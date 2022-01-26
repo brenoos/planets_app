@@ -143,6 +143,32 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.vertical(
+            top: Radius.circular(36),
+          ),
+          color: navigationColor,
+        ),
+        padding: const EdgeInsets.all(24),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Image.asset('assets/menu_icon.png'),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Image.asset('assets/search_icon.png'),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Image.asset('assets/profile_icon.png'),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
