@@ -98,7 +98,13 @@ class DetailPage extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(right: -64, child: Image.asset(planetInfo.iconImage)),
+            Positioned(
+              right: -64,
+              child: Hero(
+                tag: planetInfo.position,
+                child: Image.asset(planetInfo.iconImage),
+              ),
+            ),
             Positioned(
               top: 60,
               left: 32,
