@@ -16,6 +16,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: gradientEndColor,
       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [gradientStartColor, gradientEndColor],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: const [0.3, 0.7],
+          ),
+        ),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
