@@ -97,6 +97,27 @@ class DetailPage extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            Positioned(right: -64, child: Image.asset(planetInfo.iconImage)),
+            Positioned(
+              top: 60,
+              left: 32,
+              child: Text(
+                planetInfo.position.toString(),
+                style: TextStyle(
+                  fontFamily: 'Avenir',
+                  fontSize: 247,
+                  color: primaryTextColor.withOpacity(0.08),
+                  fontWeight: FontWeight.w900,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back_ios),
             )
           ],
         ),
