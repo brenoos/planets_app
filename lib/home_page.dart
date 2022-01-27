@@ -81,22 +81,23 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            PageRouteBuilder(
-                              pageBuilder:
-                                  (context, animation, secondaryAnimation) =>
-                                      DetailPage(planetInfo: planets[index]),
-                            ));
-                      },
-                      child: Stack(
-                        children: [
-                          Column(
-                            children: [
-                              const SizedBox(height: 100),
-                              Card(
+                    return Stack(
+                      children: [
+                        Column(
+                          children: [
+                            const SizedBox(height: 100),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    PageRouteBuilder(
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          DetailPage(
+                                              planetInfo: planets[index]),
+                                    ));
+                              },
+                              child: Card(
                                 elevation: 8,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(32)),
@@ -150,14 +151,14 @@ class _HomePageState extends State<HomePage> {
                                     ],
                                   ),
                                 ),
-                              )
-                            ],
-                          ),
-                          Hero(
-                              tag: planets[index].position,
-                              child: Image.asset(planets[index].iconImage)),
-                        ],
-                      ),
+                              ),
+                            )
+                          ],
+                        ),
+                        Hero(
+                            tag: planets[index].position,
+                            child: Image.asset(planets[index].iconImage)),
+                      ],
                     );
                   },
                 ),
