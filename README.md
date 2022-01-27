@@ -1,6 +1,8 @@
 # planets_app
 
-A new Flutter project.
+<img src="ezgif.com-gif-maker.gif"  height="450"/>
+
+A beautiful UI with Flutter.
 
 ## Getting Started
 
